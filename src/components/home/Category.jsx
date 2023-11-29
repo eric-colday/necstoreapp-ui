@@ -4,14 +4,15 @@ import { CategoriesProducts } from "../../data";
 
 const Category = ({ navigation }) => {
   return (
-    <ScrollView showsVerticalScrollIndicator={false} className="bg-gray-100  ">
-      <View className="flex-row justify-between items-center ">
-        <Text className="font-bold">Catégories</Text>
-      </View>
+    <ScrollView
+      showsVerticalScrollIndicator={false}
+      className="bg-gray-100  py-5"
+    >
+      <Text className="font-bold">Catégories</Text>
       <ScrollView
         horizontal={true}
         showsHorizontalScrollIndicator={false}
-        className="flex-row gap-5 pt-1"
+        className="flex-row gap-5 pt-5"
       >
         {CategoriesProducts.slice(0, 4).map((cat) => (
           <TouchableOpacity
@@ -25,10 +26,7 @@ const Category = ({ navigation }) => {
               }}
               className="w-10 h-10 object-cover rounded-full"
             />
-            <Text className="text-2xl font-semibold">
-              {" "}
-              {cat.title}
-            </Text>
+            <Text> {cat.title}</Text>
           </TouchableOpacity>
         ))}
       </ScrollView>

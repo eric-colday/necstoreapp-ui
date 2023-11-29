@@ -1,15 +1,15 @@
 import React from "react";
 import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
-import { Products } from "../../data";
+import { Posts } from "../../data";
 
-const FeaturedProducts = ({navigation}) => {
+const FeaturedPosts = ({navigation}) => {
   return (
     <ScrollView
       horizontal={true}
       showsHorizontalScrollIndicator={false}
-      className="flex-row gap-5 pt-4"
+      className="flex-row gap-5 pt-4 pb-40"
     >
-      {Products.slice(0, 4).map((product) => (
+      {Posts.slice(0, 4).map((product) => (
         <TouchableOpacity
           className="bg-white rounded-xl  w-72 h-72"
           key={product.id}
@@ -38,4 +38,4 @@ const FeaturedProducts = ({navigation}) => {
   );
 };
 
-export default FeaturedProducts;
+export default FeaturedPosts;
